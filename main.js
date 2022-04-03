@@ -55,7 +55,7 @@ var obfuscationResult = JavascriptObfuscator.obfuscate(orig_code, {
     disableConsoleOutput: false,
     stringArrayEncoding: ["rc4"],
     identifierNamesGenerator: "dictionary",
-    identifiersDictionary: identifierDictGenerator(30),
+    identifiersDictionary: identifierDictGenerator(1000),
 });
 let obfuscatedFilePath = path.dirname(filePath) + path.sep + path.basename(filePath).split(".").map((item, index) => {
     if (index === 0) {
