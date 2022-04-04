@@ -1,11 +1,12 @@
 #!/usr/bin/env node
-import JavascriptObfuscator from 'javascript-obfuscator';
-import path from "path";
-import printHelp from "./src/printHelp.js";
-import identifierDictGenerator from "./src/identifierDictGenerator.js";
-import readFromFile from "./src/readFromFile.js";
-import writeToFile from './src/writeToFile.js';
-import unicodeReplace from "./src/unicodeReplace.js";
+'use strict';
+const JavascriptObfuscator = require('javascript-obfuscator');
+const path = require('path');
+const printHelp = require('./src/printHelp');
+const identifierDictGenerator = require('./src/identifierDictGenerator');
+const readFromFile = require('./src/readFromFile');
+const writeToFile = require('./src/writeToFile');
+const unicodeReplace = require('./src/unicodeReplace');
 
 let filePath;
 if (process.argv.length <= 2) {

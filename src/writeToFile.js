@@ -1,4 +1,6 @@
-import fs from "fs";
+'use strict';
+
+const fs = require('fs');
 
 /**
  * 从文本文件中读取字符串
@@ -6,7 +8,7 @@ import fs from "fs";
  * @param {String} string 要写入的字符串
  * @returns {Promise<void>} 读取到的文件内容
  */
-export default function writeToFile(filePath, string) {
+module.exports = function writeToFile(filePath, string) {
     return new Promise((resolve, reject) => {
         fs.writeFile(filePath, string, function (err, data) {
             if (err) {
@@ -15,4 +17,4 @@ export default function writeToFile(filePath, string) {
             resolve();
         });
     });
-}
+};
